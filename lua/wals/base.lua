@@ -7,7 +7,7 @@ vim.scriptencoding = 'utf-8'
 opt.encoding = 'utf-8'
 opt.fileencoding = 'utf-8'
 
-opt.scrolloff = 5
+opt.scrolloff = 10
 opt.sidescrolloff = 5
 
 opt.hlsearch = true
@@ -23,6 +23,7 @@ opt.expandtab = true
 
 opt.ignorecase = true
 opt.smartcase = true
+opt.smartindent = true
 
 opt.swapfile = false
 opt.autoread = true
@@ -34,7 +35,7 @@ opt.list = true
 opt.cursorline = true
 opt.termguicolors = true
 
-opt.updatetime = 300
+opt.updatetime = 50
 opt.timeoutlen = 500
 
 opt.foldmethod = "expr"
