@@ -82,4 +82,7 @@ return require("packer").startup(function(use)
   })
 
   use("windwp/nvim-ts-autotag")
+
+  -- Emmet plugin
+  use 'mattn/emmet-vim'
 end)
