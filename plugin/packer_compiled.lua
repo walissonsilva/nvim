@@ -190,6 +190,11 @@ _G.packer_plugins = {
     path = "/home/walisson/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree"] = {
+    loaded = true,
+    path = "/home/walisson/.local/share/nvim/site/pack/packer/start/nvim-tree",
+    url = "https://github.com/nvim-tree/nvim-tree"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/walisson/.local/share/nvim/site/pack/packer/start/nvim-treesitter",

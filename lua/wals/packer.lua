@@ -85,4 +85,12 @@ return require("packer").startup(function(use)
 
   -- Emmet plugin
   use 'mattn/emmet-vim'
+
+  -- nvim-tree (file explorer)
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+  }
 end)
