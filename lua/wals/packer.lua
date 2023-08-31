@@ -93,4 +93,6 @@ return require("packer").startup(function(use)
       'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
   }
+
+  use 'crispgm/nvim-tabline'
 end)
