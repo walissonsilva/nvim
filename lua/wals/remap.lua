@@ -25,8 +25,13 @@ keymap.set("n", "<leader>Y", [["+Y]])
 keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 
+-- Navigation between tabs
 keymap.set("n", "<Tab>", "<cmd>tabn<cr>")
 keymap.set("n", "<S-Tab>", vim.cmd.tabp)
+
+-- Navigation between buffers
+keymap.set("n", "<A-Right>", vim.cmd.bn)
+keymap.set("n", "<A-Left>", vim.cmd.bp)
 
 -- keymap.set('n', 'H', '^')
 -- keymap.set('n', 'L', '$')
