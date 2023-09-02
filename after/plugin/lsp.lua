@@ -12,7 +12,6 @@ local on_attach = function()
       local ts = require("typescript").actions
       ts.addMissingImports({ sync = true })
       ts.organizeImports({ sync = true })
-      ts.removeUnused({ sync = true })
       vim.lsp.buf.format()
     end,
   })
