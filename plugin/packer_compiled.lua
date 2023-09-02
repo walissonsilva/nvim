@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/home/walisson/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
-  ["formatter.nvim"] = {
-    loaded = true,
-    path = "/home/walisson/.local/share/nvim/site/pack/packer/start/formatter.nvim",
-    url = "https://github.com/mhartington/formatter.nvim"
-  },
   harpoon = {
     loaded = true,
     path = "/home/walisson/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -249,11 +244,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/walisson/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-prettier"] = {
-    loaded = true,
-    path = "/home/walisson/.local/share/nvim/site/pack/packer/start/vim-prettier",
-    url = "https://github.com/prettier/vim-prettier"
   },
   ["vim-visual-multi"] = {
     loaded = true,

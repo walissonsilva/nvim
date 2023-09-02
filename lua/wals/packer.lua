@@ -46,15 +46,13 @@ return require("packer").startup(function(use)
       { "hrsh7th/cmp-cmdline" },   -- Optional
       { "saadparwaiz1/cmp_luasnip" }, -- Optional
       { "onsails/lspkind-nvim" },  -- Optional
-      { "jose-elias-alvarez/null-ls.nvim" },
 
       { "WhoIsSethDaniel/mason-tool-installer.nvim" },
     },
   })
 
+  use "jose-elias-alvarez/null-ls.nvim" 
   use("jose-elias-alvarez/typescript.nvim")
-
-  use("prettier/vim-prettier")
 
   use({
     "windwp/nvim-autopairs",
@@ -62,12 +60,12 @@ return require("packer").startup(function(use)
       require("nvim-autopairs").setup({})
     end,
   })
+
+  -- Multiple cursors to replace multi ocurrences
   use 'mg979/vim-visual-multi'
 
   -- Switch between files quickly
   use("ThePrimeagen/harpoon")
-
-  use({ "mhartington/formatter.nvim" })
 
   -- Catppuccin theme
   use({ "catppuccin/nvim", as = "catppuccin" })
