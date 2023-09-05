@@ -16,7 +16,8 @@ require("nvim-tree").setup({
     adaptive_size = true,
   },
   filters = {
-    -- custom = { "^node_modules$" },
+    dotfiles = false,
+    git_ignored = false,
   },
   git = {
     enable = true,

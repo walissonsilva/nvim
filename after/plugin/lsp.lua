@@ -2,19 +2,18 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
-lsp.setup()
-
-local on_attach = function()
+local on_attach = function(ev)
   local Format = vim.api.nvim_create_augroup("Format", { clear = true })
+  local opts = { buffer = ev.buf }
   vim.api.nvim_create_autocmd("BufWritePre", {
     group = Format,
     callback = function()
       local ts = require("typescript").actions
-      ts.addMissingImports({ sync = true })
-      ts.organizeImports({ sync = true })
-      vim.lsp.buf.format()
+      ts.addMissingImports({ async = true })
+      ts.organizeImports({ async = true })
+      vim.lsp.buf.format({ async = true })
     end,
-  })
+  }, opts)
 end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -87,3 +86,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opts)
   end,
 })
+
+lsp.format_on_save({
+  format_opts = {
+    async = true,
+  },
+  servers = {
+    ['lua_ls'] = { 'lua' },
+    ['rust_analyzer'] = { 'rust' },
+    ['null-ls'] = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
+  }
+})
+
+lsp.setup()

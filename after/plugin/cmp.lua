@@ -28,7 +28,8 @@ cmp.setup({
     end, { "i", "s" })
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp',
+    {
+      name = 'nvim_lsp',
       entry_filter = function(entry)
         return require('cmp.types').lsp.CompletionItemKind[entry:get_kind()] ~= 'Text'
       end
@@ -80,3 +81,14 @@ vim.cmd([[
 set completeopt=menuone,noinsert,noselect
 highlight! default link CmpItemKind CmpItemMenuDefault
 ]])
+
+-- Add border to box of completions
+-- local winhighlight = {
+--   winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel",
+-- }
+-- require('cmp').setup({
+--   window = {
+--     completion = cmp.config.window.bordered(winhighlight),
+--     documentation = cmp.config.window.bordered(winhighlight),
+--   }
+-- })

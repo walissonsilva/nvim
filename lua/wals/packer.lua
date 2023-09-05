@@ -33,25 +33,25 @@ return require("packer").startup(function(use)
     branch = "v2.x",
     requires = {
       -- LSP Support
-      { "neovim/nvim-lspconfig" },          -- Required
-      { "williamboman/mason.nvim" },        -- Optional
+      { "neovim/nvim-lspconfig" },             -- Required
+      { "williamboman/mason.nvim" },           -- Optional
       { "williamboman/mason-lspconfig.nvim" }, -- Optional
 
       -- Autocompletion
-      { "hrsh7th/nvim-cmp" },      -- Required
-      { "hrsh7th/cmp-nvim-lsp" },  -- Required
-      { "L3MON4D3/LuaSnip" },      -- Required
-      { "hrsh7th/cmp-buffer" },    -- Optional
-      { "hrsh7th/cmp-path" },      -- Optional
-      { "hrsh7th/cmp-cmdline" },   -- Optional
+      { "hrsh7th/nvim-cmp" },         -- Required
+      { "hrsh7th/cmp-nvim-lsp" },     -- Required
+      { "L3MON4D3/LuaSnip" },         -- Required
+      { "hrsh7th/cmp-buffer" },       -- Optional
+      { "hrsh7th/cmp-path" },         -- Optional
+      { "hrsh7th/cmp-cmdline" },      -- Optional
       { "saadparwaiz1/cmp_luasnip" }, -- Optional
-      { "onsails/lspkind-nvim" },  -- Optional
+      { "onsails/lspkind-nvim" },     -- Optional
 
       { "WhoIsSethDaniel/mason-tool-installer.nvim" },
     },
   })
 
-  use "jose-elias-alvarez/null-ls.nvim" 
+  use "jose-elias-alvarez/null-ls.nvim"
   use("jose-elias-alvarez/typescript.nvim")
 
   use({
@@ -69,6 +69,18 @@ return require("packer").startup(function(use)
 
   -- Catppuccin theme
   use({ "catppuccin/nvim", as = "catppuccin" })
+
+  -- Tokyo Theme
+  use 'folke/tokyonight.nvim'
+
+  -- Kanagawa Theme
+  use "rebelot/kanagawa.nvim"
+
+  -- Everforest Theme
+  use 'sainnhe/everforest'
+
+  -- Gruvbox Theme
+  use 'bluz71/vim-moonfly-colors'
 
   -- DAP (Debug Adapter Protocol)
   use("mfussenegger/nvim-dap")
