@@ -1,6 +1,6 @@
 local lsp = require("lsp-zero")
 
-lsp.preset("recommended")
+lsp.preset({})
 
 local on_attach = function(ev)
   local Format = vim.api.nvim_create_augroup("Format", { clear = true })
@@ -87,15 +87,33 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-lsp.format_on_save({
+lsp.format_on_save {
   format_opts = {
     async = true,
+    timeout_ms = 10000,
   },
   servers = {
     ['lua_ls'] = { 'lua' },
     ['rust_analyzer'] = { 'rust' },
-    ['null-ls'] = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
-  }
-})
+    ['null-ls'] = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "vue",
+      "css",
+      "scss",
+      "less",
+      "html",
+      "json",
+      "jsonc",
+      "yaml",
+      "markdown",
+      "markdown.mdx",
+      "graphql",
+      "handlebars"
+    },
+  },
+}
 
 lsp.setup()
