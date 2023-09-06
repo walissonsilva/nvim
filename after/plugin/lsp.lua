@@ -1,6 +1,6 @@
 local lsp = require("lsp-zero")
 
-lsp.preset({})
+lsp.preset("recommended")
 
 local on_attach = function(ev)
   local Format = vim.api.nvim_create_augroup("Format", { clear = true })

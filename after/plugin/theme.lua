@@ -1,5 +1,5 @@
 -- Kanagawa Theme
-vim.cmd("colorscheme kanagawa-wave")
+-- vim.cmd("colorscheme kanagawa-dragon")
 
 -- Everforest Theme
 -- vim.cmd("colorscheme everforest")
@@ -8,6 +8,6 @@ vim.cmd("colorscheme kanagawa-wave")
 -- Gruvbox theme
 -- vim.cmd [[colorscheme moonfly]]
 
--- vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme "catppuccin-mocha"
 
 -- vim.cmd.colorscheme "tokyonight-night"

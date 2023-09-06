@@ -105,4 +105,15 @@ return require("packer").startup(function(use)
   }
 
   use 'crispgm/nvim-tabline'
+
+  -- NX Monorepo
+  use {
+    'Equilibris/nx.nvim',
+    requires = {
+      'nvim-telescope/telescope.nvim',
+    },
+    config = function()
+      require("nx").setup {}
+    end
+  }
 end)
