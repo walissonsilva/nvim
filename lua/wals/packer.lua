@@ -82,6 +82,9 @@ return require("packer").startup(function(use)
   -- Gruvbox Theme
   use 'bluz71/vim-moonfly-colors'
 
+  -- Rosé Pine Theme
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
+
   -- DAP (Debug Adapter Protocol)
   use("mfussenegger/nvim-dap")
   use("mxsdev/nvim-dap-vscode-js")
