@@ -76,8 +76,8 @@ return require("packer").startup(function(use)
   -- Kanagawa Theme
   use "rebelot/kanagawa.nvim"
 
-  -- Dracula Theme
-  use({ 'dracula/vim', as = 'dracula' })
+  -- Nightfly Theme
+  use({ "bluz71/vim-nightfly-colors", as = 'nightfly' })
 
   -- DAP (Debug Adapter Protocol)
   use("mfussenegger/nvim-dap")
