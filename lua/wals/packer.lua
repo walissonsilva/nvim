@@ -76,14 +76,8 @@ return require("packer").startup(function(use)
   -- Kanagawa Theme
   use "rebelot/kanagawa.nvim"
 
-  -- Everforest Theme
-  use 'sainnhe/everforest'
-
-  -- Gruvbox Theme
-  use 'bluz71/vim-moonfly-colors'
-
-  -- Rosé Pine Theme
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+  -- Dracula Theme
+  use({ 'dracula/vim', as = 'dracula' })
 
   -- DAP (Debug Adapter Protocol)
   use("mfussenegger/nvim-dap")

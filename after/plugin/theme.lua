@@ -1,15 +1,8 @@
 -- Kanagawa Theme
 -- vim.cmd("colorscheme kanagawa-dragon")
 
--- Everforest Theme
--- vim.cmd("colorscheme everforest")
--- vim.g.everforest_background = 'soft'
-
--- Gruvbox theme
--- vim.cmd [[colorscheme moonfly]]
-
--- vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme "catppuccin-mocha"
 
 -- vim.cmd.colorscheme "tokyonight-night"
 
-vim.cmd('colorscheme rose-pine')
+-- vim.cmd.colorscheme "dracula"

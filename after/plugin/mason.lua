@@ -11,7 +11,7 @@ require('mason-tool-installer').setup {
     'rust-analyzer',
     'stylua',
     'typescript-language-server',
-    'tailwindcss',
+    -- 'tailwindcss',
     'black'
   },
   auto_update = true,
