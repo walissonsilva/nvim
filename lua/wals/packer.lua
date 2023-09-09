@@ -103,6 +103,11 @@ return require("packer").startup(function(use)
 
   use 'crispgm/nvim-tabline'
 
+  -- ToogleTerm
+  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end }
+
   -- NX Monorepo
   use {
     'Equilibris/nx.nvim',
