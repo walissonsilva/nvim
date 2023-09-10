@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
     "nvim-telescope/telescope.nvim",
     tag = "0.1.2",
     -- or                            , branch = '0.1.x',
-    requires = { { "nvim-lua/plenary.nvim" } },
+    requires = { { "nvim-lua/plenary.nvim" }, 'nvim-telescope/telescope-fzf-native.nvim' },
   })
 
   -- Add a line to display vim mode and more
@@ -45,6 +45,7 @@ return require("packer").startup(function(use)
       { "hrsh7th/cmp-path" },         -- Optional
       { "hrsh7th/cmp-cmdline" },      -- Optional
       { "saadparwaiz1/cmp_luasnip" }, -- Optional
+      { "rafamadriz/friendly-snippets" },
       { "onsails/lspkind-nvim" },     -- Optional
 
       { "WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -118,4 +119,6 @@ return require("packer").startup(function(use)
       require("nx").setup {}
     end
   }
+
+  use { 'stevearc/dressing.nvim' }
 end)

@@ -82,6 +82,8 @@ set completeopt=menuone,noinsert,noselect
 highlight! default link CmpItemKind CmpItemMenuDefault
 ]])
 
+require("luasnip.loaders.from_vscode").load {}
+
 -- Add border to box of completions
 -- local winhighlight = {
 --   winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel",
