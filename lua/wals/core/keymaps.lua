@@ -32,7 +32,3 @@ keymap.set("n", "<S-Tab>", vim.cmd.tabp)
 -- Navigation between buffers
 keymap.set("n", "<A-Right>", vim.cmd.bn)
 keymap.set("n", "<A-Left>", vim.cmd.bp)
-
--- keymap.set('n', 'H', '^')
--- keymap.set('n', 'L', '$')
-

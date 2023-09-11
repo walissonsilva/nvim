@@ -1,1 +1,2 @@
-require('wals')
+require('wals.core')
+require('wals.lazy')
