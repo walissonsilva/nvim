@@ -20,6 +20,7 @@ opt.tabstop = 2
 opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
+opt.autoindent = true
 
 opt.ignorecase = true
 opt.smartcase = true
@@ -34,6 +35,7 @@ opt.list = true
 
 opt.cursorline = true
 opt.termguicolors = true
+opt.background = "dark"
 
 opt.updatetime = 50
 opt.timeoutlen = 500
@@ -43,3 +45,5 @@ opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
 vim.wo.foldlevel = 99
+
+opt.iskeyword:append("-")
