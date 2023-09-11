@@ -4,7 +4,7 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
-    "jose-elias-alvarez/typescript.nvim"
+    "jose-elias-alvarez/typescript.nvim",
   },
   config = function()
     -- import lspconfig plugin
@@ -63,7 +63,6 @@ return {
         vim.lsp.buf.format({ async = true })
       end, opts)
 
-
       -- Configure actions on save
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = vim.api.nvim_create_augroup("Format", { clear = true }),
@@ -71,8 +70,8 @@ return {
           local ts = require("typescript").actions
           ts.addMissingImports({ async = true })
           ts.organizeImports({ async = true })
-          vim.lsp.buf.format { async = true }
-        end
+          vim.lsp.buf.format({ async = true })
+        end,
       }, opts)
     end
 
@@ -109,11 +108,51 @@ return {
     lspconfig["tailwindcss"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "django-html", "edge", "eelixir", "ejs",
-        "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid",
-        "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss",
-        "sass", "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescriptreact",
-        "vue", "svelte" }
+      filetypes = {
+        "aspnetcorerazor",
+        "astro",
+        "astro-markdown",
+        "blade",
+        "django-html",
+        "edge",
+        "eelixir",
+        "ejs",
+        "erb",
+        "eruby",
+        "gohtml",
+        "haml",
+        "handlebars",
+        "hbs",
+        "html",
+        "html-eex",
+        "heex",
+        "jade",
+        "leaf",
+        "liquid",
+        "markdown",
+        "mdx",
+        "mustache",
+        "njk",
+        "nunjucks",
+        "php",
+        "razor",
+        "slim",
+        "twig",
+        "css",
+        "less",
+        "postcss",
+        "sass",
+        "scss",
+        "stylus",
+        "sugarss",
+        "javascript",
+        "javascriptreact",
+        "reason",
+        "rescript",
+        "typescriptreact",
+        "vue",
+        "svelte",
+      },
     })
 
     -- configure svelte server
@@ -144,6 +183,12 @@ return {
 
     -- configure python server
     lspconfig["pyright"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    --
+    -- configure json-lsp server
+    lspconfig["jsonls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })

@@ -1,5 +1,6 @@
 return {
   "Equilibris/nx.nvim",
+  event = "VeryLazy",
   config = function()
     require('nx').setup {}
 
