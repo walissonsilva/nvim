@@ -145,7 +145,6 @@ return {
         "scss",
         "stylus",
         "sugarss",
-        "javascript",
         "javascriptreact",
         "reason",
         "rescript",
