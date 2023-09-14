@@ -1,5 +1,5 @@
 return {
-  "rebelot/kanagawa.nvim",
+  "catppuccin/nvim",
   lazy = false,
   priority = 1000,
   config = function()
@@ -12,6 +12,6 @@ return {
     --     show_tab_indicators = true,
     --   },
     -- })
-    vim.cmd([[colorscheme kanagawa-dragon]])
+    vim.cmd([[colorscheme catppuccin]])
   end,
 }

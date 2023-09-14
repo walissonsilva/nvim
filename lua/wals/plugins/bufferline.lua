@@ -6,6 +6,7 @@ return {
     options = {
       mode = "tabs",
       separator_style = "slant",
+      diagnostics = "nvim_lsp",
       indicator = {
         style = 'icon',
       },
