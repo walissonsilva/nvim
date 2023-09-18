@@ -185,9 +185,15 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
     })
-    --
+
     -- configure json-lsp server
     lspconfig["jsonls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    -- configure terraform-ls server
+    lspconfig["terraformls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
