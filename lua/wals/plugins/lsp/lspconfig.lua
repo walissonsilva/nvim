@@ -54,7 +54,7 @@ return {
       keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
 
       opts.desc = "Show documentation for what is under cursor"
-      keymap.set("n", "<leader>H", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+      keymap.set("n", "<leader>h", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
       opts.desc = "Restart LSP"
       keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
@@ -64,15 +64,15 @@ return {
       end, opts)
 
       -- Configure actions on save
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        group = vim.api.nvim_create_augroup("Format", { clear = true }),
-        callback = function()
-          local ts = require("typescript").actions
-          ts.addMissingImports({ async = true })
-          ts.organizeImports({ async = true })
-          vim.lsp.buf.format({ async = true })
-        end,
-      }, opts)
+      -- vim.api.nvim_create_autocmd("BufWritePre", {
+      --   group = vim.api.nvim_create_augroup("Format", { clear = true }),
+      --   callback = function()
+      --     local ts = require("typescript").actions
+      --     ts.addMissingImports({ async = true })
+      --     ts.organizeImports({ async = true })
+      --     vim.lsp.buf.format({ async = true })
+      --   end,
+      -- }, opts)
     end
 
     -- used to enable autocompletion (assign to every lsp server config)
@@ -96,6 +96,8 @@ return {
     lspconfig["tsserver"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      -- 8 gb
+      maxTsServerMemory = 8192,
     })
 
     -- configure css server
