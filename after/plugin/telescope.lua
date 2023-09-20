@@ -7,6 +7,8 @@ end)
 
 vim.keymap.set('n', '<leader>t', '<cmd>Telescope lsp_dynamic_workspace_symbols<CR>', bufopts)
 
+local actions = require("telescope.actions")
+
 require('telescope').setup {
   pickers = {
     find_files = {
@@ -14,6 +16,13 @@ require('telescope').setup {
     }
   },
   defaults = {
+    mappings = {
+      i = {
+        ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+        ["<C-j>"] = actions.move_selection_next,     -- move to next result
+        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+      },
+    },
     file_ignore_patterns = { "node_modules", "yarn.lock", ".git" },
     dynamic_preview_title = true,
     path_display = { 'smart' },

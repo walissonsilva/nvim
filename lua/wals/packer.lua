@@ -21,9 +21,6 @@ return require("packer").startup(function(use)
   -- Syntax Highlight
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
-  -- Allows you to see all changes history (and undo each of them, of course)
-  use("mbbill/undotree")
-
   -- Git tracker
   use("tpope/vim-fugitive")
 
@@ -65,9 +62,6 @@ return require("packer").startup(function(use)
   -- Multiple cursors to replace multi ocurrences
   use 'mg979/vim-visual-multi'
 
-  -- Switch between files quickly
-  use("ThePrimeagen/harpoon")
-
   -- Catppuccin theme
   use({ "catppuccin/nvim", as = "catppuccin" })
 
@@ -89,11 +83,6 @@ return require("packer").startup(function(use)
     opt = true,
   })
 
-  use("windwp/nvim-ts-autotag")
-
-  -- Emmet plugin
-  use 'mattn/emmet-vim'
-
   -- nvim-tree (file explorer)
   use {
     'nvim-tree/nvim-tree.lua',
@@ -103,11 +92,7 @@ return require("packer").startup(function(use)
   }
 
   use 'crispgm/nvim-tabline'
-
-  -- ToogleTerm
-  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end }
+  use 'lewis6991/gitsigns.nvim'
 
   -- NX Monorepo
   use {
@@ -121,4 +106,10 @@ return require("packer").startup(function(use)
   }
 
   use { 'stevearc/dressing.nvim' }
+
+  use { 'NvChad/nvim-colorizer.lua' }
+
+  use { 'numToStr/Comment.nvim' }
+
+  use { "christoomey/vim-tmux-navigator" }
 end)

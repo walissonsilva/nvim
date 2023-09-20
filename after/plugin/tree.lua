@@ -2,8 +2,9 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.keymap.set("n", "<c-e>", "<cmd>NvimTreeToggle<cr>")
+local nvimtree = require("nvim-tree")
 
-require("nvim-tree").setup({
+nvimtree.setup({
   sort_by = "case_sensitive",
   actions = {
     open_file = { quit_on_open = true },
@@ -18,7 +19,7 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = false,
     git_ignored = true,
-    custom = { '^.git$', '^node_modules$' }
+    custom = { "^.git$" },
   },
   git = {
     enable = true,

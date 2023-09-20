@@ -9,6 +9,8 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({
+    ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+    ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-c>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
@@ -37,6 +39,7 @@ cmp.setup({
     { name = 'luasnip' }, -- For luasnip users.
   }, {
     { name = 'buffer' },
+    { name = "path" }, -- file system paths
   }),
   formatting = {
     format = function(entry, vim_item)
