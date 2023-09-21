@@ -59,7 +59,7 @@ return {
 				formatting.stylua, -- lua formatter
 				diagnostics.eslint.with({ -- js/ts linter
 					condition = function(utils)
-						return utils.root_has_file({
+						return utils.has_file({
 							".eslintrc.js",
 							".eslintrc.cjs",
 							".eslintrc.yaml",

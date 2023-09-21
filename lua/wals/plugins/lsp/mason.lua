@@ -1,4 +1,3 @@
-
 return {
   "williamboman/mason.nvim",
   dependencies = {
@@ -34,7 +33,6 @@ return {
         "cssls",
         "tailwindcss",
         "lua_ls",
-        "emmet_ls",
         "prismals",
         "pyright",
       },
