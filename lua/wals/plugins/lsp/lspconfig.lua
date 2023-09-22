@@ -96,8 +96,8 @@ return {
     lspconfig["tsserver"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      -- 8 gb
-      maxTsServerMemory = 8192,
+      -- 16 gb
+      maxTsServerMemory = 16000,
     })
 
     -- configure css server
