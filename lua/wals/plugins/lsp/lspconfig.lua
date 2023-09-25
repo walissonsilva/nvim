@@ -56,6 +56,8 @@ return {
       opts.desc = "Show documentation for what is under cursor"
       keymap.set("n", "<leader>h", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
+      vim.keymap.set('n', '<leader>t', '<cmd>Telescope lsp_dynamic_workspace_symbols<CR>', opts)
+
       opts.desc = "Restart LSP"
       keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
