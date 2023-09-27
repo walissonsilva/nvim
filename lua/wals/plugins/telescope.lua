@@ -1,6 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
-  branch = "0.1.x",
+  branch = "master",
   dependencies = {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
@@ -19,14 +19,15 @@ return {
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
           },
         },
-        file_ignore_patterns = { "node_modules", ".git" },
+        file_ignore_patterns = { "node_modules/.*", ".git/.*", "dist/.*" },
         dynamic_preview_title = true,
         path_display = { "truncate" },
       },
       pickers = {
         find_files = {
-          hidden = true
-        }
+          hidden = true,
+          no_ignore = true,
+        },
       },
     })
 
