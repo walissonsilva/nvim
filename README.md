@@ -1,6 +1,6 @@
 # My Personal Neovim Setup
 
-![](assets/neovim-logo.png)
+<img src="assets/neovim-logo.png" alt="Neovim logo" width="150" >
 
 This repository contains my personal setup to use Neovim as my IDE. This setup includes support to JavaScript, Python, TypeScript, C#, ReactJS, Next.js, Node.js, .NET and more.
 
