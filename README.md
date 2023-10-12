@@ -1,9 +1,5 @@
 # My Personal Neovim Setup
 
-<div style="display: flex; align-items: center; justify-content: center; padding: 1rem 0">
-    <img src="assets/neovim-logo.png" alt="Neovim logo" width="150" style="max-width: 100%;">
-</div>
-
 This repository contains my personal setup to use Neovim as my IDE. This setup includes support to JavaScript, Python, TypeScript, C#, ReactJS, Next.js, Node.js, .NET and more.
 
 With this setup I can use Neovim as my IDE daily, in my personal projects as well as in my job.
