@@ -1,17 +1,14 @@
 return {
-  "catppuccin/nvim",
+  "folke/tokyonight.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("catppuccin").setup({
-      flavour = "mocha", -- latte, frappe, macchiato, mocha
-      background = {     -- :h background
-        light = "latte",
-        dark = "mocha",
-      },
-      transparent_background = true, -- disables setting the background color.
-      term_colors = true,            -- sets terminal colors (e.g. `g:terminal_color_0`)
+    require("tokyonight").setup({
+      style = "storm",
+      transparent = true,  -- disables setting the background color.
+      terminal_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
+      sidebars = { "qf", "help" },
     })
-    vim.cmd([[colorscheme catppuccin-mocha]])
+    vim.cmd([[colorscheme tokyonight-storm]])
   end,
 }
