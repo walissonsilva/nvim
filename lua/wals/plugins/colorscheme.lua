@@ -9,6 +9,6 @@ return {
 			terminal_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
 			sidebars = { "qf", "help" },
 		})
-		vim.cmd([[colorscheme tokyonight-storm]])
+		vim.cmd([[colorscheme tokyonight-night]])
 	end,
 }
